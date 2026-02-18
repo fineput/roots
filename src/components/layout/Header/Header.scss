@@ -1,4 +1,4 @@
-@use "../abstract/variables" as *;
+@use "../../../styles/abstract/variables" as *;
 
 .header {
     width: 100%;
@@ -19,6 +19,9 @@
             gap: 130px;
 
             li a {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 color: $color-text;
                 font-weight: 500;
                 font-size: 18px;
@@ -38,6 +41,9 @@
         font-weight: 500;
         font-size: 18px;
         transition: all 0.3s ease;
+        white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
         &:hover {
             background-color: rgba($color: #1B1812, $alpha: 0.43);
