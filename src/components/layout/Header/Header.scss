@@ -2,37 +2,57 @@
 
 .header {
     width: 100%;
-    height: 118px;
+    height: 90px;
     padding: 32px 80px;
-    background-color: $color-bg;
+    background-color: rgba($color: $color-fon, $alpha: 0.33);
 
-    &__nav{
+    &__nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 100%;
     }
 
     .nav_links {
         ul {
             display: flex;
             list-style: none;
-            gap: 130px;
+            gap: 100px;
+        }
 
-            li a {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                color: $color-text;
+        .nav_link {
+            text-decoration: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $color-text;
+            font-weight: 500;
+            font-size: 18px;
+            transition: color 0.3s;
+
+            &:hover {
+                opacity: 0.6;
+            }
+
+            &--active {
+                color: #1B1812;
                 font-weight: 500;
                 font-size: 18px;
-                transition: 0.3s;
+                position: relative;
 
-                &:hover {
-                    opacity: 0.6;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: #8793BC;
                 }
             }
         }
     }
+
     .get_in_touch {
         border: 5px solid rgba($color: #1B1812, $alpha: 0.43);
         padding: 15px;
@@ -42,8 +62,8 @@
         font-size: 18px;
         transition: all 0.3s ease;
         white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         &:hover {
             background-color: rgba($color: #1B1812, $alpha: 0.43);

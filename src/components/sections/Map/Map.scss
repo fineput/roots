@@ -7,17 +7,18 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 134px;
+        margin-top: 70px;
     }
 
     &__header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 100px;
         width: 100%;
         padding: 35px;
 
-        background: rgba($color: #B3AEA3, $alpha: 0.33);
+        background: rgba($color: $color-fon, $alpha: 0.33);
         border-radius: 15px;
         box-shadow: 0 6px 6px 2px rgba($color: #000000, $alpha: 0.25);
     }    
@@ -65,10 +66,15 @@
             bottom: 0px;
             left: 35px;
             right: 35px;
-            height: 1px;
+            height: 2px;
             background-color: rgba($color: #000000, $alpha: 0.45);
         }
+    }
 
-
+    &__visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 }
